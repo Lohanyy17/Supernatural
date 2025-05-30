@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Special Elite', cursive;
+    background-color: #f5f5f5;
+    color: #000;
+    background-image: url('../assets/fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;    
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo{
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    position: relative;
+}
+
+.irmaos-section {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 200%;
+}
+
+.irmaos-winchester {
+    max-width: 150%;
+    height: auto;
+}
+
+.personagens-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.personagem {
+    text-align: center;
+    width: 25%;
+}
+
+.tv-frame{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.character-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.impala-container{
+    position: relative;
+    width: 80%;
+    text-align: center;
+}
+
+.impala-main{
+    max-width: 80%;
+    margin-left: 60px;
+    height: auto;
+}
+
+.musica-nota{
+    font-size: 24px;
+    margin-top: 380px;
+    position: absolute;
+    left: 820px;
+    font-weight: bold;
+}
+
+.nota{
+    position: absolute;
+    top: 16px;
+    left: 800px;
+}
+
+.notadois{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.quote-section{
+    text-align: center;
+    margin: 40px 0;
+}
+
+.quote {
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.quote-author{
+    font-family: 'Special Elite', monospace;
+    font-size: 18px;
+    text-align: center;
+    white-space: pre-line;
+
+    margin-top: 10px;
+    position: absolute;
+    left: 48%;
+    text-align: right;
+    font-weight: bold;
+}
+
+.carro-bottom-section{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.carro-bottom{
+    position: relative;
+    top: 76px;
+    left: -300px;
+    animation: andarCarro 10s linear infinite;
+    height: auto;
+    max-height: 100%;
+}
+
+@keyframes andarCarro {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.impala-gif{
+    max-width: 200px;
+    height: auto;
+    
+}
+
+.deco-vinil {
+    position: absolute;
+    top: 270px;
+    left: 200px;
+    z-index: -1;
+    opacity: 0.8;
+    animation: rotate 5s linear infinite;
+}
+
+.deco-vinildois {
+    position: absolute;
+    top: 280px;
+    right: -60px;
+    z-index: -1;
+    opacity: 0.8;
+    animation: rotate 5s linear infinite;
+}
+
+.vinil {
+    max-width: 150px;
+    margin-top: 290%;
+    height: auto;
+}
+
+.faixa{
+    background-color: black;
+    width: 150%;
+    height: 80px;
+    position: absolute;
+    top: 20px;
+    left: -25%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+} 
+
+@media (max-width: 768px) {
+    .characters-section {
+        flex-direction: column;
+    }
+    
+    .character, .car-container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .vinyl-decoration, .pie-decoration {
+        display: none;
+    }
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('static/assets/fundo.png');
+    opacity: 0.3;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 1px, transparent 2px),
+        radial-gradient(circle at 70% 60%, rgba(255,255,255,0.1) 1px, transparent 2px),
+        linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.05) 50%, transparent 52%);
+    background-size: 100px 100px, 150px 150px, 10px 10px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.heroes-section::before {
+    content: '★';
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 24px;
+    transform: rotate(15deg);
+}
+
+.heroes-section::after {
+    content: '✧';
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    font-size: 20px;
+    transform: rotate(-10deg);
+}
