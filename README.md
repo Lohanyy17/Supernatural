@@ -5,7 +5,7 @@
 ## Desenvolvimento 
 
 ![print inicio](static/assets/printsupernatural.png)
-![print fim](static/assets/printsuper.png)
+![print fim](static/assets/printsuperr.png)
 
 ## Links
 
